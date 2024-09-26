@@ -12,6 +12,9 @@ export class TaskService{
         return this.tasks
     }
 
+    getTask(id: number){
+        return this.tasks.find(task => task.id === id)
+    }
     createTasks(task: any){
         this.tasks.push(task)
         return task
